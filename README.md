@@ -17,7 +17,7 @@ Just clone this repository and edit the file archive.php:
 
 Then run the script:
 
- php archive.php
+    php archive.php
 
 ## Cronjob
 
