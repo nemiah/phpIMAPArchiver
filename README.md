@@ -6,14 +6,14 @@ So I wrote this script to regularly archive her INBOX to another folder.
 ## Getting Started
 Just clone this repository and edit the file archive.php:
 
- $server = "localhost:143";
- $user = "test@test.de";
- $password = "123456";
+    $server = "localhost:143";
+    $user = "test@test.de";
+    $password = "123456";
 
- $from = "INBOX";
- $to = "INBOX.Archiv.{Y}";
+    $from = "INBOX";
+    $to = "INBOX.Archiv.{Y}";
 
- $olderThan = "-6 months"; //strtotime format
+    $olderThan = "-6 months"; //strtotime format
 
 Then run the script:
 
@@ -23,4 +23,4 @@ Then run the script:
 
 To regularly archive the messages, add a cronjob:
 
- 0 3 * * 0 /usr/bin/php /home/nemiah/archive.php
+    0 3 * * 0 /usr/bin/php /home/nemiah/archive.php

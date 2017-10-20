@@ -43,6 +43,9 @@ foreach($folders AS $k => $folder)
 
 $UIDs = imap_search($mbox, "BEFORE ".date("d-M-Y", $olderThan), SE_UID);
 
+if($UIDs === false)
+	exit();
+
 foreach($UIDs AS $UID){
 	$header = imap_fetch_overview($mbox, $UID, FT_UID);
 	$datum = $header[0]->udate;
